@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ken桑 - 台灣加盟產業獨立裁判</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Ken桑<span> - 加盟裁判</span></div>
+            <div class="nav-links">
+                <a href="#services-c" class="link-c">我想加盟顧問諮詢</a>
+                <a href="#contact" class="link-b"
+                    onclick="document.querySelector('[data-target=\'form-b\']').click()">加盟總部接洽</a>
+            </div>
+            <a href="#contact" class="btn btn-outline">立即諮詢</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">台灣加盟產業的獨立裁判：<br><span class="highlight">不做球員，只定規則。</span></h1>
+                <p class="hero-subtitle">市場缺一個敢說真話的人，我來做。<br><br><strong
+                        style="color: var(--text-main);">對加盟小白：</strong><br>總部說「六個月回本」卻不敢寫進合約？<br>把合約交給我，為你掃雷破解 10
+                    大自殺條款，保護你的創業資金。</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">立即尋求諮詢 / 加盟總部合作接洽</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section To C -->
+    <section id="services-c" class="section">
+        <div class="container section-grid">
+            <div class="section-text">
+                <div class="label">全方位加盟諮詢(加盟前、加盟期間、加盟後)</div>
+                <h2 class="section-title">加盟前置風險評估與戰略諮詢</h2>
+                <p class="section-desc">創業不該是盲目的賭博。我們專注解決創業小白的痛點，破解合約中的隱藏陷阱。</p>
+                <ul class="feature-list">
+                    <li>
+                        <div class="feature-icon"><img src="assets/icon_hidden_costs_1772281306229.png" alt="隱形成本" />
+                        </div>
+                        <div class="feature-content">
+                            <h3>揭露隱形成本</h3>
+                            <p>裝潢、設備、保證金，為您精算每一筆未明言的費用。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-icon"><img src="assets/icon_chains_1772281320522.png" alt="原物料綁定陷阱" /></div>
+                        <div class="feature-content">
+                            <h3>破解原物料綁定陷阱</h3>
+                            <p>洞悉利潤結構，避免被總部不合理的進貨價剝削。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-icon"><img src="assets/icon_shield_1772281336766.png" alt="違約條款健檢" /></div>
+                        <div class="feature-content">
+                            <h3>不合理違約條款健檢</h3>
+                            <p>提供專業防雷指南，確保您的退場機制安全無虞。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-image">
+                <div class="glass-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">真實違約判決案例解析</h3>
+                        <div class="case-study">
+                            <p class="case-number">臺灣臺北地方法院 112 年度訴字第 18XX 號</p>
+                            <p class="case-desc">
+                                <strong>爭議點：</strong>總部單方面將核心原物料調漲30%，加盟主拒絕進貨，遭總部以「違反採購約定」片面解約並沒收保證金100萬。
+                            </p>
+                            <p class="case-result">
+                                <strong>判決結果：</strong>合約並未明訂物價波動分攤機制，且賦予總部「絕對定價權」。但因簽署合約即視為同意，加盟主敗訴，保證金全數沒收。
+                            </p>
+                            <p class="case-insight">🔔 <strong>Ken桑掃雷：</strong>簽約若無加入「進貨價調漲幅度上限條款」，您的保證金就是總部的合法提款機。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact & Form Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header text-center" style="text-align: center;">
+                <h2 class="section-title">與我們聯繫</h2>
+                <p class="section-desc">選擇符合您的身分，開始建立信任的第一步。</p>
+            </div>
+
+            <div class="form-container">
+                <div class="form-tabs">
+                    <button class="tab-btn active" data-target="form-c">我想加盟諮詢</button>
+                    <button class="tab-btn" data-target="form-b">我是加盟總部</button>
+                </div>
+
+                <div class="form-content">
+                    <!-- Form C -->
+                    <form id="form-c" class="tab-pane active">
+                        <div class="form-group">
+                            <label>姓名</label>
+                            <input type="text" placeholder="請輸入您的真實姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label>聯絡電話</label>
+                            <input type="tel" placeholder="請輸入聯絡電話" required>
+                        </div>
+                        <div class="form-group">
+                            <label>聯絡信箱</label>
+                            <input type="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>LINE ID</label>
+                            <input type="text" placeholder="請輸入 LINE ID (選填)">
+                        </div>
+                        <div class="form-group">
+                            <label>目前的身份是？</label>
+                            <select id="status-select" required>
+                                <option value="" disabled selected>請選擇您的身分</option>
+                                <option value="considering">正考慮加盟品牌</option>
+                                <option value="franchisee">已經是加盟主</option>
+                                <option value="changing">加盟後正考慮轉品牌或自營</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="other-status-group" style="display: none;">
+                            <label>請說明您的身分 (必填)</label>
+                            <input type="text" id="other-status-input" placeholder="請簡述您的情況">
+                        </div>
+                        <div class="form-group">
+                            <label>最擔心的加盟陷阱 (可複選)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label"><input type="checkbox" name="trap" value="hidden-cost">
+                                    隱形成本過高</label>
+                                <label class="checkbox-label"><input type="checkbox" name="trap" value="material-bind">
+                                    原物料綁定/調漲</label>
+                                <label class="checkbox-label"><input type="checkbox" name="trap"
+                                        value="unreasonable-terms"> 不合理違約條款</label>
+                                <label class="checkbox-label"><input type="checkbox" name="trap" value="false-promise">
+                                    總部畫大餅不兌現</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label highlight-checkbox">
+                                <input type="checkbox" name="request-checklist" checked>
+                                索取《防雷檢核表》(免費)
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">送出諮詢</button>
+                    </form>
+
+                    <!-- Form B -->
+                    <form id="form-b" class="tab-pane">
+                        <div class="form-group">
+                            <label>品牌名稱</label>
+                            <input type="text" placeholder="請輸入加盟品牌名稱" required>
+                        </div>
+                        <div class="form-group">
+                            <label>聯絡人與職稱</label>
+                            <input type="text" placeholder="例如：王小明 / 營運總監" required>
+                        </div>
+                        <div class="form-group">
+                            <label>聯絡信箱</label>
+                            <input type="email" placeholder="example@brand.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>合作內容</label>
+                            <textarea placeholder="請詳細說明您期望的合作方式與內容..." required class="form-textarea"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>品牌目前規模 (店數)</label>
+                            <select required>
+                                <option value="" disabled selected>請選擇店數規模</option>
+                                <option value="1-5">1 - 5 間</option>
+                                <option value="6-20">6 - 20 間</option>
+                                <option value="21-50">21 - 50 間</option>
+                                <option value="50+">50 間以上</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn">加盟總部合作接洽</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center" style="text-align: center;">
+            <p>&copy; 2026 Ken桑 台灣加盟產業獨立裁判. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

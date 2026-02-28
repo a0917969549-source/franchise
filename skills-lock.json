@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-dev": {
+      "source": "srbhr/Resume-Matcher",
+      "sourceType": "github",
+      "computedHash": "02f34029205173e5aa4011f48accb5d5b944e1a8f28e4b2e8f311f995b27b6a1"
+    }
+  }
+}
