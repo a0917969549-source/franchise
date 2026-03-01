@@ -88,6 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     selectedStatusText = inputs[5].value.trim(); // 取得「其他」文字框內容
                 }
 
+                const requestChecklist = form.querySelector('input[name="request-checklist"]').checked;
+
                 payload = {
                     type: 'form-c',
                     name: inputs[0].value.trim(),
@@ -95,7 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     email: inputs[2].value.trim(),
                     lineId: inputs[3].value.trim() || '無',
                     status: selectedStatusText,
-                    traps: traps || '無勾選'
+                    traps: traps || '無勾選',
+                    requestChecklist: requestChecklist ? '是' : '否'
                 };
             } else if (form.id === 'form-b') {
                 const inputs = form.querySelectorAll('input, select');
