@@ -710,8 +710,22 @@ input[type="checkbox"]:checked::before {
         grid-template-columns: 1fr;
     }
 
+    .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
     .nav-links {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .nav-links a.link-btn {
+        font-size: 0.95rem;
+        padding: 0.5rem 0.8rem;
     }
 
     .form-content {
