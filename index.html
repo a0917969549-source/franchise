@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&family=Fira+Code:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -19,11 +20,12 @@
         <div class="container nav-content">
             <div class="logo">Ken桑<span> - 加盟裁判</span></div>
             <div class="nav-links">
-                <a href="#services-c" class="link-c">我想加盟顧問諮詢</a>
-                <a href="#contact" class="link-b"
-                    onclick="document.querySelector('[data-target=\'form-b\']').click()">加盟總部接洽</a>
+                <a href="#services-c" class="link-btn link-c"><i data-lucide="shield-check"></i> 我想加盟顧問諮詢</a>
+                <a href="#contact" class="link-btn link-b"
+                    onclick="document.querySelector('[data-target=\'form-b\']').click()"><i
+                        data-lucide="building-2"></i> 加盟總部接洽</a>
             </div>
-            <a href="#contact" class="btn btn-outline">立即諮詢</a>
+            <a href="#contact" class="btn btn-outline"><i data-lucide="message-square-text"></i> 立即諮詢</a>
         </div>
     </nav>
 
@@ -36,11 +38,19 @@
                         style="color: var(--text-main);">對加盟小白：</strong><br>總部說「六個月回本」卻不敢寫進合約？<br>把合約交給我，為你掃雷破解 10
                     大自殺條款，保護你的創業資金。</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">立即尋求諮詢 / 加盟總部合作接洽</a>
+                    <a href="#contact" class="btn btn-primary"><i data-lucide="handshake"></i> 立即尋求諮詢 / 加盟總部合作接洽</a>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Marquee -->
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <span>不做球員 只定規則 /// 破解隱藏陷阱 /// 保護創業資金 /// 拒絕總部話術 /// 不做球員 只定規則 /// 破解隱藏陷阱 /// 保護創業資金 /// 拒絕總部話術 /// </span>
+            <span>不做球員 只定規則 /// 破解隱藏陷阱 /// 保護創業資金 /// 拒絕總部話術 /// 不做球員 只定規則 /// 破解隱藏陷阱 /// 保護創業資金 /// 拒絕總部話術 /// </span>
+        </div>
+    </div>
 
     <!-- Services Section To C -->
     <section id="services-c" class="section">
@@ -95,7 +105,35 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="section section-darker">
+        <div class="container">
+            <div class="section-header text-center" style="text-align: center; margin-bottom: 3rem;">
+                <div class="label" style="box-shadow: var(--shadow-hard-sm);">不再被話術蒙蔽</div>
+                <h2 class="section-title">直擊加盟現場實況</h2>
+                <p class="section-desc">我們從不只看總部的精美簡報，為您實地考察揭開加盟產業的真實面貌。</p>
+            </div>
 
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="pictures/1772331590620@2x.jpg" alt="現場實況 1" class="gallery-img" loading="lazy">
+                    <div class="gallery-caption">現場考察紀錄 #01</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pictures/1772331659891@2x.jpg" alt="現場實況 2" class="gallery-img" loading="lazy">
+                    <div class="gallery-caption">現場考察紀錄 #02</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pictures/1772332340951@2x.jpg" alt="現場實況 3" class="gallery-img" loading="lazy">
+                    <div class="gallery-caption">營業報表解密 #03</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pictures/1772332373416@2x.jpg" alt="現場實況 4" class="gallery-img" loading="lazy">
+                    <div class="gallery-caption">原物料抽查 #04</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact & Form Section -->
     <section id="contact" class="section contact-section">
@@ -163,7 +201,8 @@
                                 索取《防雷檢核表》(免費)
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-primary submit-btn">送出諮詢</button>
+                        <button type="submit" class="btn btn-primary submit-btn"><i data-lucide="send"></i>
+                            送出諮詢</button>
                     </form>
 
                     <!-- Form B -->
@@ -195,7 +234,8 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btn btn-primary submit-btn">加盟總部合作接洽</button>
+                        <button type="submit" class="btn btn-primary submit-btn"><i data-lucide="handshake"></i>
+                            加盟總部合作接洽</button>
                     </form>
                 </div>
             </div>
@@ -209,6 +249,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // 初始化 Lucide 圖標
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>

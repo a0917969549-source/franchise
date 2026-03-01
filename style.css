@@ -30,6 +30,8 @@
 
 body {
     background-color: var(--bg-color);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
     color: var(--text-main);
     font-family: var(--font-body);
     line-height: 1.6;
@@ -78,41 +80,55 @@ a {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
+    align-items: center;
 }
 
-.nav-links a {
-    font-size: 1.15rem;
-    font-weight: 800;
+.nav-links a.link-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
     transition: var(--transition);
     letter-spacing: 0.5px;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 4px;
+    padding: 0.6rem 1.2rem;
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-hard-sm);
+    background: #fff;
+}
+
+.nav-links a.link-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
 }
 
 .nav-links a.link-c {
     color: var(--accent-blue);
-}
-
-.nav-links a.link-c:hover {
-    border-bottom: 2px solid var(--accent-blue);
+    border-color: var(--accent-blue);
 }
 
 .nav-links a.link-b {
     color: var(--accent-green);
+    border-color: var(--accent-green);
 }
 
-.nav-links a.link-b:hover {
-    color: var(--accent-green);
-    border-bottom: 2px solid var(--accent-green);
+/* Lucide Icons alignment */
+.lucide {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
 }
 
 /* 按鈕設計 - 絕對的硬派瑞士風格 */
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
     padding: 0.8rem 1.8rem;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: var(--transition);
     font-family: var(--font-body);
@@ -124,7 +140,7 @@ a {
 }
 
 .btn:hover {
-    transform: translate(1px, 1px);
+    transform: translate(2px, 2px);
     box-shadow: none;
 }
 
@@ -137,20 +153,46 @@ a {
     background-color: var(--bg-color);
     color: var(--text-main);
     box-shadow: var(--shadow-hard-sm);
+    font-weight: 800;
 }
 
 /* Hero Section */
 .hero {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding-top: 80px;
-    background-color: var(--bg-color);
+    background-color: transparent;
+    /* Changed from var(--bg-color) to show body dots */
     border-bottom: var(--border-width) solid var(--border-color);
+    overflow: hidden;
+}
+
+.hero::after {
+    content: 'JUSTICE / TRUTH /';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    font-size: clamp(100px, 15vw, 250px);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.04);
+    white-space: nowrap;
+    z-index: 0;
+    pointer-events: none;
+    line-height: 1;
 }
 
 .hero-content {
-    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    background: #fff;
+    padding: 3rem;
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-hard);
 }
 
 .hero-title {
@@ -243,18 +285,39 @@ a {
 }
 
 .feature-list li {
+    position: relative;
     display: flex;
     gap: 1.5rem;
     margin-bottom: 2rem;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     border: var(--border-width) solid var(--border-color);
     background: #fff;
     box-shadow: var(--shadow-hard);
     transition: var(--transition);
+    overflow: hidden;
+}
+
+.feature-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background: var(--accent-red);
+    border-right: var(--border-width) solid var(--border-color);
+}
+
+.feature-list li:nth-child(2)::before {
+    background: var(--accent-blue);
+}
+
+.feature-list li:nth-child(3)::before {
+    background: var(--accent-green);
 }
 
 .feature-list li:hover {
-    transform: translate(1px, 1px);
+    transform: translate(2px, 2px);
     box-shadow: none;
 }
 
@@ -393,9 +456,48 @@ a {
     box-shadow: var(--shadow-hard-sm);
 }
 
+/* Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    background: #fff;
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-hard);
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: var(--border-width) solid var(--border-color);
+    display: block;
+}
+
+.gallery-caption {
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-align: left;
+    border-top: var(--border-width) dashed var(--border-color);
+    padding-top: 0.8rem;
+}
+
 /* Form Section */
 .contact-section {
-    background: var(--bg-color);
+    background: transparent;
 }
 
 .form-container {
@@ -619,5 +721,41 @@ input[type="checkbox"]:checked::before {
     .tab-btn {
         padding: 1rem;
         font-size: 1rem;
+    }
+}
+
+/* Marquee */
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: var(--accent-blue);
+    color: #fff;
+    border-bottom: var(--border-width) solid var(--border-color);
+    padding: 1.2rem 0;
+    display: flex;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.marquee-content span {
+    padding: 0 2rem;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }
